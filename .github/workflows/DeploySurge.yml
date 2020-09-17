@@ -34,7 +34,7 @@ jobs:
         # uses: Borales/actions-yarn@4965e1a0f0ae9c422a9a5748ebd1fb5e097d22b9
         uses: Borales/actions-yarn@v2.3.0
         with:
-          cmd: install            
+          run: yarn install
           
       - name: Build React App
         run: yarn build
