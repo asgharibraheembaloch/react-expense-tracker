@@ -38,7 +38,7 @@ jobs:
         run: yarn build
         
       - name: install surge
-        run: npm install -g surge
+        run: yarn install -g surge
         
       - name: Deploy to Surge
         run: surge ./build react-expense-tracker-asgharbaloch.surge.sh --token ${{secrets.SURGE_TOKEN}}
