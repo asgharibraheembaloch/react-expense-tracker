@@ -34,7 +34,7 @@ jobs:
           cmd: install
           
       - name: Build React App
-        run: yarn build
+        uses: yarn build
         
       - name: Deploy to Surge
-        run: surge ./build react-expense-tracker-asgharbaloch.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        uses: surge ./build react-expense-tracker-asgharbaloch.surge.sh --token ${{secrets.SURGE_TOKEN}}
