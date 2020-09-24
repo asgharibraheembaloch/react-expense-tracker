@@ -33,9 +33,9 @@ export const GlobalProvidor = ({children}) => {
             {
                 transactions:state.transactions,
                 delTransaction,
-                addTransaction
+                addTransaction 
             }
         }>
             {children}
-        </GlobalContext.Provider>    )
-}
+        </GlobalContext.Provider>  
+)}
