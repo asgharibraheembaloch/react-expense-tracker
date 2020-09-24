@@ -11,13 +11,13 @@ import './App.css'; */
 function App() {
   return (
     <GlobalProvidor>
-      <Header />
       <div className="container">
-        <Balance/>
-        <AccountSummary/>
-        <TransactionHistory/>
-        <AddTransaction/>
-      </div>     
+        <Header />
+        <Balance />
+        <AccountSummary />
+        <TransactionHistory />
+        <AddTransaction />
+      </div>
     </GlobalProvidor>
   );
 }
