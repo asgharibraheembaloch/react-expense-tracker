@@ -11,7 +11,6 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import UpdateIcon from "@material-ui/icons/Update";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -30,41 +29,50 @@ export const Transaction = ({ transaction }) => {
   let [edit, setEdit] = useState(false);
 
   return (
-    <Paper variant="outlined" round style={{margin:10}}>
-    <List className={classes.root}>
-      {edit ? (
-        <ListItem>
-          <TextField
-            label="Description"
-            variant="outlined"
-            style={{ margin: 4 }}
-            size="small"
-            ref={inputRef}
-            type="text"
-            placeholder={transaction.description}
-            onChange={(event) => setDescription(event.target.value)}
-          ></TextField>
-          <TextField
-            label="Amount"
-            style={{ margin: 8 }}
-            size="small"
-            variant="outlined"
-            ref={inputRef}
-            type="number"
-            placeholder={transaction.amount}
-            onChange={(event) => setAmount(event.target.value)}
-          ></TextField>
-        </ListItem>
-      ) : (
-        <ListItem >
-          <Typography color='textPrimary' variant="h4" component="h2" gutterBottom noWrap>
-          <ListItemText style={transaction.amount>0?{color: 'green'}:{color: 'red'}}
-            primary={transaction.description}
-            secondary={`$  ${transaction.amount}`}
-          />
-          </Typography>
-        </ListItem>
-      )}
+    <Paper variant="outlined" round style={{ margin: 10 }}>
+      <List className={classes.root}>
+        {edit ? (
+          <ListItem>
+            <TextField
+              label="Description"
+              variant="outlined"
+              style={{ margin: 4 }}
+              size="small"
+              ref={inputRef}
+              type="text"
+              placeholder={transaction.description}
+              onChange={(event) => setDescription(event.target.value)}
+            ></TextField>
+            <TextField
+              label="Amount"
+              style={{ margin: 8 }}
+              size="small"
+              variant="outlined"
+              ref={inputRef}
+              type="number"
+              placeholder={transaction.amount}
+              onChange={(event) => setAmount(event.target.value)}
+            ></TextField>
+          </ListItem>
+        ) : (
+          <ListItem>
+            <Typography
+              color="textPrimary"
+              variant="h4"
+              component="h2"
+              gutterBottom
+              noWrap
+            >
+              <ListItemText
+                style={
+                  transaction.amount > 0 ? { color: "green" } : { color: "red" }
+                }
+                primary={transaction.description}
+                secondary={`$  ${transaction.amount}`}
+              />
+            </Typography>
+          </ListItem>
+        )}
         {edit ? (
           <Button
             variant="contained"
@@ -112,7 +120,7 @@ export const Transaction = ({ transaction }) => {
             Delete
           </Button>
         )}
-    </List>
+      </List>
     </Paper>
   );
 };

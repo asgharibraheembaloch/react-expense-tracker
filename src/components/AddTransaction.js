@@ -23,12 +23,14 @@ export const AddTransaction = () => {
   };
   return (
     <div>
-        <Typography color='textPrimary' variant="h7" component="h3" gutterBottom>Add New Transaction</Typography>
+      <Typography color="textPrimary" variant="h7" component="h3" gutterBottom>
+        Add New Transaction
+      </Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Description"
           variant="outlined"
-          style={{ margin: 4}}
+          style={{ margin: 4 }}
           size="small"
           ref={inputRef}
           type="text"
