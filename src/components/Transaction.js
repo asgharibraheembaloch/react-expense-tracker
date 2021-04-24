@@ -30,7 +30,7 @@ export const Transaction = ({ transaction }) => {
   let [edit, setEdit] = useState(false);
 
   return (
-    <div>
+    <Paper variant="outlined" round style={{margin:10}}>
     <List className={classes.root}>
       {edit ? (
         <ListItem>
@@ -65,7 +65,6 @@ export const Transaction = ({ transaction }) => {
           </Typography>
         </ListItem>
       )}
-      <ListItem divider={true}>
         {edit ? (
           <Button
             variant="contained"
@@ -113,8 +112,7 @@ export const Transaction = ({ transaction }) => {
             Delete
           </Button>
         )}
-      </ListItem>
     </List>
-    </div>
+    </Paper>
   );
 };
