@@ -55,9 +55,9 @@ export const Transaction = ({ transaction }) => {
           ></TextField>
         </ListItem>
       ) : (
-        <ListItem>
+        <ListItem >
           <Typography color='textPrimary' variant="h4" component="h2" gutterBottom>
-          <ListItemText
+          <ListItemText style={transaction.amount>0?{color: 'green'}:{color: 'red'}}
             primary={transaction.description}
             secondary={`$  ${transaction.amount}`}
           />

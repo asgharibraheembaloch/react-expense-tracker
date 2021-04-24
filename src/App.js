@@ -25,10 +25,10 @@ function App() {
   const classes = useStyles();
   return (
     <TransactionsProvidor>
-      <div className={classes.root}>
-        <Grid container justify="center" spacing={3}>
+      <div className={classes.root} >
+        <Grid  container justify="center" spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <Paper className={classes.paper}>
+            <Paper style={{margin: 20, border:'solid'}} className={classes.paper}>
               <Header />
               <TotalBalance />
               <ExpenseAndIncome />
