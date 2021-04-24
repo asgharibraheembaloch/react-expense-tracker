@@ -28,7 +28,7 @@ export const AddTransaction = () => {
         <TextField
           label="Description"
           variant="outlined"
-          style={{ margin: 4 }}
+          style={{ margin: 4}}
           size="small"
           ref={inputRef}
           type="text"
