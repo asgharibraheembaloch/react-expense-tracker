@@ -5,6 +5,7 @@ import { TransactionsContext } from "../context/ContextApi";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
+import { Typography } from "@material-ui/core";
 
 export const AddTransaction = () => {
   const [description, setDescription] = useState("");
@@ -22,6 +23,7 @@ export const AddTransaction = () => {
   };
   return (
     <div>
+        <Typography color='textPrimary' variant="h7" component="h3" gutterBottom>Add New Transaction</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Description"
