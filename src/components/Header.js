@@ -1,9 +1,10 @@
-import React from 'react';
+import { Typography } from "@material-ui/core";
+import React from "react";
 
 export const Header = () => {
-    return(
-        <div>
-            <h1>Expense Tracker</h1>            
-        </div>
-    )
-}
+  return (
+    <div>
+      <Typography color='textPrimary' variant="h5" component="h2" gutterBottom>Expense Tracker App</Typography>
+    </div>
+  );
+};
