@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import React, { useContext } from "react";
 import { TransactionsContext } from "../context/ContextApi";
 import { Transaction } from "./Transaction";
@@ -6,7 +6,7 @@ import { Transaction } from "./Transaction";
 export const TransactionsList = () => {
   const { transactions } = useContext(TransactionsContext);
   return (
-    <div>
+    <Paper variant="outlined" round>
       <Typography color="textPrimary" variant="h7" component="h3" gutterBottom>
         Transaction List
       </Typography>
@@ -16,6 +16,6 @@ export const TransactionsList = () => {
           <Transaction key={transaction.id} transaction={transaction} />
         ))}
       </div>
-    </div>
+    </Paper>
   );
 };

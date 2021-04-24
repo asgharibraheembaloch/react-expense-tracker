@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { TextField, Typography } from "@material-ui/core";
+import { Paper, TextField, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -30,6 +30,7 @@ export const Transaction = ({ transaction }) => {
   let [edit, setEdit] = useState(false);
 
   return (
+    <div>
     <List className={classes.root}>
       {edit ? (
         <ListItem>
@@ -114,5 +115,6 @@ export const Transaction = ({ transaction }) => {
         )}
       </ListItem>
     </List>
+    </div>
   );
 };
